@@ -1,0 +1,417 @@
+@import '~antd/dist/antd.css';
+body {
+  font-family: "Manrope", sans-serif;
+  background: #f7fafc;
+  color: #000;
+  line-height: 35px;
+}
+
+.bg-dark-gray {
+  background: #a0aec0;
+}
+
+.bg-gray {
+  background: #828282;
+}
+
+.bg-deep-gray {
+  background: #425466;
+}
+
+.bg-dark-blue {
+  background: #01436b;
+}
+
+.text-dark-gray {
+  color: #a0aec0;
+}
+
+.text-gray {
+  color: #828282;
+}
+
+.text-deep-gray {
+  color: #425466;
+}
+
+.text-dark-blue {
+  color: #01436b;
+}
+
+.text-purple {
+  color: #6c52b2;
+}
+
+.overflow-scroll-x {
+  overflow: scroll-x;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.max-w-search {
+  width: 200px;
+}
+
+/********************************
+
+            LAYOUT
+
+********************************/
+.layout {
+  position: relative;
+}
+
+@media screen and (max-width: 991px) {
+  .layout__content {
+    top: 0;
+    width: 100%;
+  }
+  .layout__nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 10;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .layout {
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-areas: "navbar content";
+    column-gap: 2px;
+  }
+  .layout__nav {
+    grid-area: navbar;
+    background-color: #fff;
+    padding: 20px;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  .layout__nav .fixed {
+    position: fixed;
+    height: 90vh;
+  }
+  .layout__content {
+    grid-area: content;
+  }
+}
+
+.layout .anticon {
+  vertical-align: 0;
+}
+
+.layout .input-group-search {
+  max-width: 300px;
+}
+
+.layout__content {
+  margin-bottom: 78px;
+}
+
+.layout__content-header {
+  padding: 20px;
+  background: #fff;
+}
+
+.layout__content-header .notification {
+  position: relative;
+}
+
+.layout__content-header .notification-badge {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: -5px;
+  top: 0px;
+  line-height: 15px;
+  text-align: center;
+  font-size: 11px;
+}
+
+.btn {
+  border-radius: 10px !important;
+}
+
+/********************************
+
+            DASHBOARD
+
+********************************/
+.dashboard__main {
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .dashboard__main {
+    padding: 20px;
+  }
+}
+
+.dashboard__main .selec_t {
+  min-width: 250px;
+}
+
+@media screen and (min-width: 768px) {
+  .dashboard__main-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .dashboard__main-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.dashboard__main-cards .car_d {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+}
+
+.dashboard__main-cards .car_d img {
+  width: 55px;
+  height: 55px;
+}
+
+.dashboard__main-cards .car_d span {
+  font-size: 14px;
+}
+
+.dashboard__main-cards .car_d .num {
+  font-size: 16px;
+}
+
+.dashboard__main-cards .car_d.span-2 {
+  grid-column: span 2;
+}
+
+.dashboard__payment {
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .dashboard__payment {
+    padding: 20px;
+  }
+}
+
+.dashboard__payment .bb-payment {
+  border-bottom: 2px solid #1d90b9;
+}
+
+.dashboard__payment .search {
+  overflow-x: scroll;
+  width: 100%;
+}
+
+/********************************
+
+            OVERVIEW
+
+********************************/
+.overview__main {
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .overview__main {
+    padding: 20px;
+  }
+}
+
+.overview__main .selec_t {
+  min-width: 250px;
+}
+
+@media screen and (min-width: 992px) {
+  .overview__main-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 20px;
+  }
+}
+
+.overview__main-cards .car_d {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.overview__main-cards .car_d img {
+  width: 55px;
+  height: 55px;
+}
+
+.overview__main-cards .car_d span {
+  font-size: 14px;
+}
+
+.overview__main-cards .car_d .num {
+  font-size: 16px;
+}
+
+.overview__main-cards .car_d.span-2 {
+  grid-column: span 2;
+}
+
+.overview__payment {
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .overview__payment {
+    padding: 20px;
+  }
+}
+
+.overview__payment .bb-payment {
+  border-bottom: 2px solid #1d90b9;
+}
+
+.overview__payment .search {
+  overflow-x: scroll;
+  width: 100%;
+}
+
+/********************************
+
+        TRANSACTION-DETAIL
+
+********************************/
+.detail__main {
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .detail__main {
+    padding: 20px;
+  }
+}
+
+.detail__main .profile-details {
+  padding: 30px 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .detail__main .profile-details {
+    padding: 30px;
+  }
+}
+
+.detail__main .profile-details .profile-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.detail__main .profile-details h3 {
+  font-size: 22px;
+}
+
+.detail__main .profile-details h4 {
+  font-size: 18px;
+}
+
+.detail__main .profile-details h5.heading {
+  font-size: 16px;
+}
+
+.detail__main .profile-details .bank-img {
+  width: 50px;
+  height: 50px;
+}
+
+.detail__main .profile-details .transfer {
+  font-size: 22px;
+}
+
+.detail__main .profile-details .success {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+}
+
+.payment__breakdown {
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .payment__breakdown {
+    padding: 20px;
+  }
+}
+
+.tableStatus {
+  font-size: 13px;
+  border-radius: 50px !important;
+  padding: 2px;
+}
+
+.f19 {
+  font-size: 19px!important;
+}
+
+.f14 {
+  font-size: 14px!important;
+}
+
+.f15 {
+  font-size: 15px!important;
+}
+
+.green {
+  background-color: #219653 !important
+}
+
+.buttonColor {
+  background-color: #425466;
+}
+
+.navButton {
+  font-weight: bold;
+  margin-right: 7px !important;
+}
+
+.mr40 {
+  margin-right: 40px !important;
+}
+
+.m0 {
+  margin: 0 !important;
+}
+
+.hpad14 {
+  padding: 14px 0;
+}
+
+.ant-picker-large {
+  padding: 11px !important;
+}
+
+.ant-picker-range {
+  height: 100% !important;
+  border-radius: 10px !important;
+}
+
+.ant-input-affix-wrapper {
+  border-radius: 10px !important;
+}
+
+.ant-select-lg  .ant-select-selector {
+  height: auto !important;
+  padding: 4px 11px !important;
+  border-radius: 10px !important;
+}
+
+.fw600 {
+  font-weight: 500;
+}
